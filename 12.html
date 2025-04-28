@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coalitia pentru Sanatate Respiratorie din Moldova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f7f8fc;
+      color: #8b0b0b;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .event-cover {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      animation: slideUp 1.2s ease forwards;
+    }
+
+    .event-cover img {
+      width: 100%;
+      display: block;
+    }
+
+    .event-info {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .event-info p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: slideUp 1.7s ease forwards;
+    }
+
+    .gallery img {
+      height: 150px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: inline-block;
+      text-align: center;
+      margin: 20px auto 40px;
+      padding: 12px 24px;
+      background: #8b0b0b;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .back-button:hover {
+      background: #ff0000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      .gallery img {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1>Healty Lungs for Life</h1>
+      <p>Evenimentul „Healthy Lungs for Life” este organizat în cadrul Congresului de Medicină Internă</p>
+    </header>
+
+    <div class="event-cover">
+      <img src="12.jpg" alt="Обложка события">
+    </div>
+
+    <div class="event-info">
+      <h2>Despre eveniment</h2>
+      <p>Evenimentul „Healthy Lungs for Life” este organizat în cadrul Congresului de Medicină Internă, de către Catedra de Pneumologie și Alergologie a USMF „Nicolae Testemițanu” în colaborare cu Coaliția pentru Sănătate Respiratorie din Moldova.
+        Evenimentul va avea loc pe data de 13 septembrie, începând cu ora 09:00, la Centrul Universitar de Simulare în Instruirea Medicală, și este destinat studenților, medicilor rezidenți și medicilor specialiști. Scopul este de a promova sănătatea plămânilor prin educație, prevenție și implicare activă în campanii publice.
+        
+        </p>
+      
+    </div>
+
+    <div class="gallery">
+          </div>
+  </main>
+
+  <a href="galerie foto.html" class="back-button">← Galerie foto</a>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Coalitia pentru Sanatate Respiratorie din Moldova</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f9ff;
+      color: #961414;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #940b0b;
+      margin-bottom: 1rem;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: #a80303;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-block {
+      background: #ffffff;
+      border-left: 6px solid #f70606;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .info-block:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 40px rgba(214, 2, 2, 0.3);
+      background: #fff0f0;
+    }
+
+    footer {
+      background: #921313;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1>Despre noi</h1>
+
+    <div class="section" id="about">
+      <div class="info-block">
+        <h2>Cine suntem noi?</h2>
+        <p>Coaliția pentru Sănătate Respiratorie din Moldova este o organizație dedicată promovării sănătății respiratorii prin educație, campanii de conștientizare, și colaborare cu profesioniști din domeniu.
+        </p>
+      </div>
+
+      <div class="info-block">
+        <h2>Misiunea Coaliției</h2>
+        <p> 1.Promovarea sănătății respiratorii în rândul populației
+          <p>2.Reducerea incidenței bolilor respiratorii prin educație</p>
+         <p> 3.Creșterea accesului la screening-uri și tratamente inovatoare</p>
+         </p>
+      </div>
+
+      <div class="info-block">
+        <h2>Obiectivele noastre</h2>
+        <p>1.Organizarea de campanii anti-fumat</p>
+        <p>2.Implementarea programelor de educație respiratorie la nivelul instituțiilor de stat</p>
+        <p>3.Promovarea cercetării și schimbului de bune practici</p>
+        <p>4.Dezvoltarea unor rețele profesionale puternice</p>
+        
+        
+        
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Coalitia pentru Sanatate Respiratorie din Moldova.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
